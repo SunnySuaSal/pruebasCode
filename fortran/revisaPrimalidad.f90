@@ -9,7 +9,7 @@ do 100 i=2, kk
 write(*,10) k
 10 format(10x,i5,1x,'es primo')
 stop
-50 write(*,20)
+50 write(*,20) k, i
 20 format(10x,i5,1x,'no es primo',10x,i5,1x,'es un divisor')
 stop
 end
