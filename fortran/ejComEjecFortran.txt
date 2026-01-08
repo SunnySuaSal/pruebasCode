@@ -1,0 +1,7 @@
+In case you forget, this is how the command
+you usually use (primarly) in this fedora laptop
+to compile Fortran code looks like:
+
+gfortran revisaPrimalidad.f90 -o revisaPrimalidad.out
+
+Thats it. Good look and good bye.
