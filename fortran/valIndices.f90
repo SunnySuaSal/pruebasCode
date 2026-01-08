@@ -34,6 +34,9 @@ write(*, 10) score(m*k-1)
 write(*, 10) score(aux(3))
 write(*, 10) score(2*aux(2))
 write(*, 10) score(aux(2)*2)
+!maybe exponentials
+write(*, 10) score(2**2)
+write(*, 10) score(m**m)
 !yes, they all work
 stop
 end
