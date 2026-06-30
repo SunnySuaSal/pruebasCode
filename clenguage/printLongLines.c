@@ -1,5 +1,6 @@
 #include <stdio.h>
-#define MAXLINE 16 /* Maximum input line size */
+#define MAXLINE 1000 /* Maximum input line size */
+#define MINIMUM 80 /* Minimum size to be printed */
 
 int getLine(char line[], int maxLine);
 void copy(char to[], char from[]);
@@ -7,20 +8,12 @@ void copy(char to[], char from[]);
 /* Print longest input line */
 int main(){
   int len; //current line length
-  int max; //maximum length seen so far
   char line[MAXLINE]; //current input line
-  char longest[MAXLINE]; //longest line saved here
 
-  max = 0;
   while ((len = getLine(line, MAXLINE)) > 0) { //while still having a line to receive
-    if(len > max){
-      max = len;
-      copy(longest, line);
-    }
+    if(len > MINIMUM)
+      printf("%s\n", line);
   }
-  if(max > 0) //there was a line
-      printf("%s\n", longest);
-
   return 0;
 }
 
@@ -44,7 +37,7 @@ int getLine(char s[], int lim){
 
   //remember always the sring terminator at the end
   s[i] = '\0';
-  return len;
+  return i;
 }
 
 /* copy: copy 'from' into 'to'; assume to is big enough */
